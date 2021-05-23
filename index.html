@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="app.js"></script>
+    <style>
+        body{
+        height:40em;
+        display:flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        }
+        .sqaure{
+          background:red;
+          width: 9.6em;
+          height: 9.585em;
+          transform: rotate(45deg);
+        }
+    
+        .semi1 {
+          background: red;
+          width: 10em;
+          height: 5em;
+          border-top-left-radius: 50% 100%;
+          border-top-right-radius: 50% 100%;
+          transform: rotate(-45deg);
+        }
+    
+        .semi2 {
+          background: red;
+          width: 10em;
+          height: 5em;
+          border-top-left-radius: 50% 100%;
+          border-top-right-radius: 50% 100%;
+          transform: rotate(45deg);
+        }
+    
+        .semi{
+          display: flex;
+          flex-direction: row;
+          transform: translate(0, 2em);
+        }
+    
+        .text{
+          color: cadetblue;
+          font-size: 3em;
+        }
+        
+      </style>
+</head>
+<body>
+    <div style="padding: 1em;">
+        <input type="number" id="inp1">
+        <input type="number" id="inp2">
+        <div style="margin-top: 1em; margin-bottom: 1em; display: flex; justify-content: space-evenly;">
+            <button onclick="onAdd()">Add</button>
+            <button onclick="onSub()">Subtract</button>
+            <button onclick="onMul()">Multiply</button>
+            <button onclick="onDiv()">Divide</button>
+        </div>
+
+        
+    </div>
+    <div id="ansWrap" style="display: none; margin-top: 1em;">
+        <div class="semi">
+            <div class="semi1"></div>
+            <div class="semi2"></div>
+        </div>
+        <div class="sqaure"></div>
+        <div class="text" style="margin-top: 1em;">
+            You answer is <span id="ans"></span>
+        </div>
+    </div>
+    
+    
+      
+    
+
+</body>
+</html>
