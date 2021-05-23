@@ -1,10 +1,12 @@
 const express = require("express");
 const cors = require('cors');
 const app = express()
-const PORT = 8080;
+const PORT = 5555;
 
 app.use(express.json())
-app.use(cors())
+app.use(cors({
+    origin: "*",
+}))
 
 app.post('/mul', (req, res)=>{
     const {inp1, inp2} = req.body;

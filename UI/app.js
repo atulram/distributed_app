@@ -2,22 +2,22 @@ var a, b, result
 
 function onAdd(){
     getInputs()
-    makeApiCall("python", "add")
+    makeApiCall("add")
 }
 
 function onSub(){
     getInputs()
-    makeApiCall("python", "sub")
+    makeApiCall("sub")
 }
 
 function onMul(){
     getInputs()
-    makeApiCall("node", "mul")
+    makeApiCall("mul")
 }
 
 function onDiv(){
     getInputs()
-    makeApiCall("node", "div")
+    makeApiCall("div")
 }
 
 function getInputs(){
@@ -34,12 +34,8 @@ function showResult(){
     }
 }
 
-function makeApiCall(servername, operation){
-    if(servername === "python"){
-        url = "http://127.0.0.1:5000/"+operation
-    } else if(servername === "node"){
-        url = "http://127.0.0.1:8080/"+operation
-    }
+function makeApiCall(operation){
+    url = "http://127.0.0.1:8080/"+operation
     const data = { "inp1": a, "inp2": b };
 
     fetch(url, {
